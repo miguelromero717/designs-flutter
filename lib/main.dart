@@ -1,17 +1,19 @@
 import 'package:designs/src/pages/basic_design_page.dart';
+import 'package:designs/src/pages/home_page.dart';
 import 'package:flutter/material.dart';
  
-void main() => runApp(MyApp());
+void main() => runApp(DesignsApp());
  
-class MyApp extends StatelessWidget {
+class DesignsApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Designs App',
-      initialRoute: 'basic',
+      initialRoute: '/',
       routes: {
-        'basic' : (BuildContext context) => BasicDesign()
+        '/'     : (BuildContext context) => HomePage(),
+        'basic' : (BuildContext context) => BasicDesignPage()
       },
     );
   }
