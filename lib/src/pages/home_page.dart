@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
           SizedBox(
             height: 20.0,
           ),
-          _buttonDesign(context, 'Full', ''),
+          _buttonDesign(context, 'Full', 'buttons'),
         ],
       ),
     );
