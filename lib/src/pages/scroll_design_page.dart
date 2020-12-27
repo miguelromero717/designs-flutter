@@ -61,15 +61,31 @@ class ScrollDesignPage extends StatelessWidget {
       height: double.infinity,
       color: Color.fromRGBO(108, 192, 218, 1.0),
       child: Center(
-        child: RaisedButton(
-          shape: StadiumBorder(),
-          color: Colors.blue,
-          textColor: Colors.white,
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
-            child: Text('Bienvenidos', style: TextStyle(fontSize: 20.0)),
-          ),
-          onPressed: () => Navigator.pushNamed(context, 'buttons'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            RaisedButton(
+              shape: StadiumBorder(),
+              color: Colors.blue,
+              textColor: Colors.white,
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
+                child: Text('Bienvenidos', style: TextStyle(fontSize: 20.0)),
+              ),
+              onPressed: () => Navigator.pushNamed(context, 'buttons'),
+            ),
+            SizedBox(height: 20.0),
+            RaisedButton(
+              shape: StadiumBorder(),
+              color: Colors.blue,
+              textColor: Colors.white,
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
+                child: Text('Home', style: TextStyle(fontSize: 20.0)),
+              ),
+              onPressed: () => Navigator.pushNamed(context, '/'),
+            ),
+          ],
         ),
       ),
     );
