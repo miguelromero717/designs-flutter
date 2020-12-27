@@ -1,22 +1,25 @@
+import 'package:designs/src/pages/buttons_design_page.dart';
 import 'package:flutter/material.dart';
- 
-void main() => runApp(MyApp());
- 
-class MyApp extends StatelessWidget {
+
+import 'package:designs/src/pages/basic_design_page.dart';
+import 'package:designs/src/pages/home_page.dart';
+import 'package:designs/src/pages/scroll_design_page.dart';
+
+void main() => runApp(DesignsApp());
+
+class DesignsApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Material App Bar'),
-        ),
-        body: Center(
-          child: Container(
-            child: Text('Hello World'),
-          ),
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
+      title: 'Designs App',
+      initialRoute: '/',
+      routes: {
+        '/'       : (BuildContext context) => HomePage(),
+        'basic'   : (BuildContext context) => BasicDesignPage(),
+        'scroll'  : (BuildContext context) => ScrollDesignPage(),
+        'buttons' : (BuildContext context) => ButtonsDesignPage(),
+      },
     );
   }
 }
