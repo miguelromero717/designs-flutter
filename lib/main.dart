@@ -1,9 +1,11 @@
+import 'package:flutter/material.dart';
+
 import 'package:designs/src/pages/basic_design_page.dart';
 import 'package:designs/src/pages/home_page.dart';
-import 'package:flutter/material.dart';
- 
+import 'package:designs/src/pages/scroll_design_page.dart';
+
 void main() => runApp(DesignsApp());
- 
+
 class DesignsApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -12,8 +14,9 @@ class DesignsApp extends StatelessWidget {
       title: 'Designs App',
       initialRoute: '/',
       routes: {
-        '/'     : (BuildContext context) => HomePage(),
-        'basic' : (BuildContext context) => BasicDesignPage()
+        '/'      : (BuildContext context) => HomePage(),
+        'basic'  : (BuildContext context) => BasicDesignPage(),
+        'scroll' : (BuildContext context) => ScrollDesignPage(),
       },
     );
   }

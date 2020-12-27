@@ -19,7 +19,7 @@ class HomePage extends StatelessWidget {
           SizedBox(
             height: 20.0,
           ),
-          _buttonDesign(context, 'Scroll', ''),
+          _buttonDesign(context, 'Scroll', 'scroll'),
           SizedBox(
             height: 20.0,
           ),

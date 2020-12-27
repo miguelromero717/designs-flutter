@@ -4,10 +4,11 @@ class BasicDesignPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SingleChildScrollView(
+      body: SingleChildScrollView(
       child: Column(
         children: <Widget>[
           _createImage(context),
+          _homeButton(context),
           _createTitle(),
           SizedBox(height: 20.0,),
           _createActions(),
@@ -25,7 +26,7 @@ class BasicDesignPage extends StatelessWidget {
     return Container(
       width: double.infinity,
       child: GestureDetector(
-        onTap: () {},
+        onTap: () => Navigator.pushNamed(context, 'scroll'),
         child: Image(
           image: NetworkImage(
               'https://images.pexels.com/photos/4275885/pexels-photo-4275885.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'),
@@ -95,6 +96,27 @@ class BasicDesignPage extends StatelessWidget {
         child: Text(
           'Sit minim aliqua minim laborum duis occaecat consectetur aliquip id ad deserunt. Adipisicing qui reprehenderit eu eu qui occaecat exercitation et aliqua laboris dolor. Nisi duis consectetur veniam id nulla deserunt aliqua velit ullamco. Deserunt exercitation adipisicing nostrud amet eu.',
           textAlign: TextAlign.justify,
+        ),
+      ),
+    );
+  }
+
+  Widget _homeButton(BuildContext context) {
+    return Container(
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(height: 10.0,),
+            FloatingActionButton(
+              tooltip: 'Home',
+              child: Icon(Icons.home),
+              onPressed: () {
+                Navigator.pushNamed(context, '/');
+              }
+            ),
+          ],
         ),
       ),
     );
